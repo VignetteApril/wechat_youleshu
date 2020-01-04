@@ -1,0 +1,20 @@
+<!-- 顶部搜索框 -->
+<van-search shape='round' value="{{ search }}" placeholder="搜索课程/年级" bind:change="onChange" bind:search="onSearch" />
+
+<van-cell-group title="{{ grade.name }}" wx:for="{{ data }}" wx:for-item="grade" wx:index="index" wx:key="id" wx:if="{{ data.length > 0 }}">
+  <van-cell wx:for="{{ grade.subjects }}" wx:for-item="subject" wx:index="index" wx:key="id" data-id="{{ subject.id }}" bindtap="onClickSubject" >
+    <view slot="title" class='subject-content'>
+      <image class='subject-image' src="{{ subject.img_url }}" mode="widthFix"></image>
+      <view class='right-content'>
+        <text class='subject-title'> {{ subject.name }} </text>
+        <text class='subject-hint'>含视频教程</text>
+      </view>
+    </view>
+  </van-cell>
+</van-cell-group>
+
+<!-- 无数据时显示 -->
+<view class="no-data" wx:if="{{ data.length == 0 }}">
+  <image src="/assets/icons/shared/no_data.png"  mode="widthFix"></image>
+  <text>暂无数据</text>
+</view>

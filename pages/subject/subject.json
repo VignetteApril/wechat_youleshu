@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-collapse": "../../van/collapse/index",
+    "van-collapse-item": "../../van/collapse-item/",
+    "van-cell": "../../van/cell/index",
+    "van-cell-group": "../../van/cell-group/index",
+    "van-popup": "../../van/popup/index",
+    "van-field": "../../van/field/index"
+  }
+}

@@ -1,0 +1,23 @@
+/* pages/setting/setting.wxss */
+
+.bottom-area {
+  background-color: white;
+  position: fixed;
+  bottom: 0rpx;
+  width: 100vw;
+  height: 100rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-area text {
+  font-family: SourceHanSansCN-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2rpx;
+	color: #0db5ff;
+}

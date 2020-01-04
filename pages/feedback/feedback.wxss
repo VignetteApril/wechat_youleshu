@@ -1,0 +1,48 @@
+/* pages/feedback/feedback.wxss */
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.input-field {
+  height: 300rpx !important;
+}
+
+.limit-num {
+  margin-top: 220rpx;
+}
+
+/* upload section */
+
+.upload-area {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+
+/* bottom section */
+
+.bottom-button {
+  width: 100vw;
+	height: 100rpx;
+	background-color: #0db4ff;
+	box-shadow: 5rpx 5rpx 49rpx 0rpx 
+    rgba(0, 90, 255, 0.07);
+    
+  position: absolute;
+  bottom: 0rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-button text {
+  font-family: SourceHanSansCN-Regular;
+	font-size: 29rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #feffff;
+}

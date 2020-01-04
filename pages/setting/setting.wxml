@@ -1,0 +1,9 @@
+
+<van-cell-group>
+  <van-cell title="用户协议" is-link bindtap="onClickUserAgreement" />
+  <van-cell title="隐私条款" is-link bindtap="onClickPrivacyPolicy" />
+</van-cell-group>
+
+<view class='bottom-area' bindtap="onClickLogOut" style="padding-bottom: {{paddingBottom}}">
+  <text class='button-text'>退出登录</text>
+</view>

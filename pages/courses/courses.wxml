@@ -1,0 +1,26 @@
+<!-- 顶部搜索框 -->
+<van-search shape='round' value="{{ search }}" placeholder="搜索课程/年级" bindtap='onClickSearchBar' readonly="{{ true }}" />
+
+<!-- 顶部banner -->
+<image src="{{banner_url}}" mode="widthFix" class='banner'></image>
+
+<!-- 下部年级课程区域 -->
+<view class='grade'>
+  <van-tabs active="{{ active }}" bind:change="onChange" color="#0db5ff">
+    <van-tab title="{{ grade.name }}" wx:for="{{ grade_data }}"  wx:for-item="grade" wx:for-index="index" wx:key='id'>
+      <view class='subjects'>
+        <view class='subject' wx:if="{{ grade.subjects.length > 0 }}" wx:for="{{ grade.subjects }}" wx:for-item="subject" wx:for-index="index" wx:key="id" data-id="{{ subject.id }}" bind:tap="onClickSubject">
+          <view class="text-section">
+            <text class="subject-title">{{ subject.name }}</text>
+          </view>
+          <image src="{{subject.img_url}}" mode="widthFix" class='subject-cover'></image>
+        </view>
+
+        <view class="no-data" wx:if="{{ grade.subjects.length == 0 }}">
+          <image src="/assets/icons/shared/no_data.png"  mode="widthFix"></image>
+          <text>暂无数据</text>
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>

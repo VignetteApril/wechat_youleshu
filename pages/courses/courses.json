@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-search": "../../van/search/index",
+    "van-tab": "../../van/tab/index",
+    "van-tabs": "../../van/tabs/index"
+  },
+  "navigationBarTitleText": "学习"
+}

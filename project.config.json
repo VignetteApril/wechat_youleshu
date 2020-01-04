@@ -1,0 +1,144 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wx3b5d48894105a505",
+	"projectname": "youleshu",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "主页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "学习",
+					"pathName": "pages/courses/courses",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "课程详情",
+					"pathName": "pages/subject/subject",
+					"query": "subject_id=7",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "获取用户信息",
+					"pathName": "pages/getUserInfo/getUserInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "获取用户的手机号",
+					"pathName": "pages/getUserInfo/getUserPhone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "反馈与帮助",
+					"pathName": "pages/feedback/feedback",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的课程",
+					"pathName": "pages/mySubjects/mySubjects",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设置",
+					"pathName": "pages/setting/setting",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "用户协议",
+					"pathName": "pages/userAgreement/userAgreement",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "隐私条款",
+					"pathName": "pages/privacyPolicy/privacyPolicy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "用户搜索页面",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

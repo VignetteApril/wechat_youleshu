@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-cell": "../../van/cell/index",
+    "van-cell-group": "../../van/cell-group/index",
+    "van-popup": "../../van/popup/index",
+    "van-field": "../../van/field/index"
+  },
+  "navigationBarTitleText": "个人中心"
+}

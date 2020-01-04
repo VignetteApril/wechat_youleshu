@@ -1,0 +1,62 @@
+/* pages/courses/courses.wxss */
+
+.banner {
+  height: 283rpx;
+  width: 750rpx;
+  margin-bottom: -12rpx;
+}
+
+.grade .subjects {
+  margin-top: 25rpx;
+  margin-left: 35rpx;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.grade .subjects .subject {
+  margin-top: 10rpx;
+  position: relative;
+}
+
+.grade .subjects .subject image {
+  width: 678rpx;
+	height: 200rpx;
+}
+
+.grade .subjects .subject .text-section {
+  position: absolute;
+  top: 30rpx;
+  right: 200rpx;
+}
+
+.grade .subjects .subject .text-section .subject-title {
+  font-family: SourceHanSansCN-Medium;
+	font-size: 42rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #ffffff;
+}
+
+.no-data {
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-data image {
+  width: 335rpx;
+  height: 200rpx;
+}
+
+.no-data text{
+  font-family: SourceHanSansCN-Normal;
+	font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1rpx;
+	color: #9a9b9b;
+}

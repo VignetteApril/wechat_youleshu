@@ -1,0 +1,71 @@
+<!-- top video section -->
+<view class="top-video">
+  <video class='my-video' id="courseVideo" src="{{current_play_url}}" autoplay='{{false}}' show-center-play-btn="{{false}}" controls="true" objectFit="cover" custom-cache="{{false}}"></video>
+</view>
+
+<!-- middle subject detail section -->
+<view class='subject-detail'>
+  <van-collapse value="{{ activeNames }}" bind:change="onChange">
+    <van-collapse-item title="课程目录" name="1" icon="apps-o">
+      <van-cell-group  border="{{ false }}">
+        <van-cell wx:if="{{ subject.courses.length > 0 }}" wx:for="{{ subject.courses }}" wx:for-item="course" wx:for-index="index" wx:key="id" data-id="{{ course.id }}" data-video-url="{{ course.video_url }}" data-video-type="{{ course.video_type }}" bind:click="onChangeVideo">
+          <view slot="title" class='course-title' wx:if="{{ is_playing == course.id }}">
+            <view>
+              <image src="../../assets/icons/subjects/play.png" class='play-icon' mode="widthFix"></image>
+              <text class='playing-title'>{{ course.name }}</text>
+            </view>
+            <text class='playing-title'>正在播放</text>
+          </view>
+
+          <view slot="title" class='course-title' wx:else>
+            <view>
+              <text class='normal-title'>{{ course.name }}</text>
+            </view>
+
+            <text class='title-time'>{{ course.video_length }}</text>
+          </view>
+        </van-cell>
+      </van-cell-group>
+    </van-collapse-item>
+    <van-collapse-item title="课程介绍" name="2" icon="orders-o">
+      <view class='course-directions'>
+        <image mode="widthFix" class='detail-image' wx:for="{{ subject.detail_images }}" wx:for-item="detail_image" wx:index="index" wx:key="id" src="{{ detail_image.image_url }}" lazy-load="true"></image>
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+</view>
+
+<!-- bottom section -->
+<view class='bottom-bar' style="padding-bottom: {{paddingBottom}}">
+  <image src="../../assets/icons/shared/white_key.png" mode="widthFix" class="left-icon"></image>
+  <text class="input-book-code" bindtap="showInpurBookCode">输入学习码</text>
+  <view class='buy-now-button'>
+    <text class='buy-now-text'>立即购买</text>
+  </view>
+</view> 
+
+<!-- 弹出层 -->
+<van-popup show="{{ showInpurBookCode }}" bind:close="onClose" custom-class="popup">
+  <view class='input-book-code-pop'>
+    <image src="../../assets/icons/subjects/tower.png" mode="widthFix" class='tower'></image>
+  </view>
+
+  <view class='input-area'>
+    <van-field
+      value="{{ bookValue }}"
+      border="{{ false }}"
+      bind:change="onBookValueChange"
+      input-class="input-bar"
+    >
+      <text class='input-label' slot='label'>请输入学习码</text>
+    </van-field>
+
+    <text class='hint'>注：从《邮乐书》致家长的一封信中获取学习码</text>
+
+    <view class='submit-book-code' bindtap="onClickSubmitBookCode">
+      <text class='submit-text'>提交</text>
+    </view>
+  </view>
+
+  <image src="../../assets/icons/subjects/close.png" mode="widthFix" class='close-pop' bindtap="onClosePop"></image>
+</van-popup>

@@ -1,0 +1,74 @@
+<view class='top-view'>
+  <image src="../../assets/icons/my/my_back.png" class='top-background-image'></image>
+  <view class='user-info-content'>
+    <view class=".user-info-section">
+      <image class="user-head" src="{{ avatarUrl }}" mode="widthFix" bindtap="onClickUserHead"></image>
+      <view class="name-phone">
+        <text class="name">{{ nickName }}</text>
+        <text class="phone" bindtap="onClickUsePhone">{{ userPhone }}</text>
+      </view>
+    </view>
+    <view class="menu-section">
+      <view class="center-area">
+        <view class="content">
+          <image src="../../assets/icons/my/my_order.png" mode="widthFix" class='user-head'></image>
+          <text>我的订单</text>
+        </view>
+
+        <view class="content" bindtap="onClickMySubjects">
+          <image src="../../assets/icons/my/my_courses.png" mode="widthFix" class="courses"></image>
+          <text>我的课程</text>
+        </view>
+
+        <view class="content" bindtap="onClickSetting">
+          <image src="../../assets/icons/my/my_setting.png" mode="widthFix" class="setting"></image>
+          <text>设置</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='bottom-section'>
+  <van-cell title="输入学习码" is-link bindtap="showInpurBookCode">
+    <view slot="icon" class="icon-slot">
+      <image src="../../assets/icons/shared/key.png" mode="widthFix" class="left-icon"></image>
+    </view>
+  </van-cell>
+  <van-cell title="收货地址" is-link >
+    <view slot="icon" class="icon-slot">
+      <image src="../../assets/icons/my/my_addr.png" mode="widthFix" class="left-icon"></image>
+    </view>
+  </van-cell>
+  <van-cell title="反馈与帮助" is-link bindtap="goToFeedback">
+    <view slot="icon" class="icon-slot">
+      <image src="../../assets/icons/my/my_env.png" mode="widthFix" class="left-icon"></image>
+    </view>
+  </van-cell>
+</view>
+
+<!-- 弹出层 -->
+<van-popup show="{{ showInpurBookCode }}" bind:close="onClose" custom-class="popup">
+  <view class='input-book-code-pop'>
+    <image src="../../assets/icons/subjects/tower.png" mode="widthFix" class='tower'></image>
+  </view>
+
+  <view class='input-area'>
+    <van-field
+      value="{{ bookValue }}"
+      border="{{ false }}"
+      bind:change="onBookValueChange"
+      input-class="input-bar"
+    >
+      <text class='input-label' slot='label'>请输入学习码</text>
+    </van-field>
+
+    <text class='hint'>注：从《邮乐书》致家长的一封信中获取学习码</text>
+
+    <view class='submit-book-code' bindtap="onClickSubmitBookCode">
+      <text class='submit-text'>提交</text>
+    </view>
+  </view>
+
+  <image src="../../assets/icons/subjects/close.png" mode="widthFix" class='close-pop' bindtap="onClosePop"></image>
+</van-popup>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-field": "../../van/field/index",
+    "van-uploader": "../../van/uploader/index"
+  },
+  "navigationBarTitleText": "反馈与帮助"
+}

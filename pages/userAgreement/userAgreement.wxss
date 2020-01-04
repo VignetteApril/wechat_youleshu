@@ -1,0 +1,15 @@
+/* pages/userAgreement/userAgreement.wxss */
+.content {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.content image {
+  width: 650rpx;
+  height: auto;
+}

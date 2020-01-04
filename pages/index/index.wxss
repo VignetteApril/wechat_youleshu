@@ -1,0 +1,97 @@
+/**index.wxss**/
+/* top video section */
+.top-video .my-video{
+  height: 366rpx;
+  width: 750rpx;
+}
+
+/* subjects section */
+
+.subject-section {
+  margin-bottom: 20rpx;
+}
+
+.subjects .title-bar {
+  margin-top: 25rpx;
+  margin-left: 34rpx;
+
+  display: flex;
+  flex-direction: row;
+}
+.subjects .title-bar .icon {
+  height: 44rpx;
+  width: 44rpx;
+}
+
+.subjects .title-bar text {
+  margin-left: 15rpx;
+  font-family: SourceHanSansCN-Medium;
+	font-size: 34rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #494949;
+}
+
+.subjects .subject-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.subjects .subject-content .content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+}
+
+.subjects .subject-content .content {
+  width: 330rpx;
+  height: 360rpx;
+}
+
+.subjects .subject-content .content image {
+  height: 235rpx;
+  width: 330rpx;
+  border-radius: 12rpx 12rpx 0 0;
+}
+
+.subjects .subject-content .content .content-text {
+  background-color: #ffffff;
+	box-shadow: 0rpx 0rpx 18rpx 0rpx 
+		rgba(28, 68, 140, 0.13);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 106rpx;
+  padding: 10rpx;
+  border-radius: 0 0 12rpx 12rpx;
+}
+
+.subjects .subject-content .content .content-text .subject-name {
+  font-family: SourceHanSansCN-Medium;
+	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #494949;
+}
+
+.subjects .subject-content .content .content-text .hint {
+  font-family: SourceHanSansCN-Normal;
+	font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1rpx;
+	color: #9a9b9b;
+}
+
+.pop {
+  width: 100rpx;
+  height: 50rpx;
+}

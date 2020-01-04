@@ -1,0 +1,35 @@
+<view class='page'>
+  <van-cell-group>
+    <van-field
+      value="{{ message }}"
+      type="textarea"
+      placeholder="请输入留言"
+      border="{{ true }}"
+      maxlength="{{ 140 }}"
+      input-class='input-field'
+      bind:change="onChangeMessage"
+    >
+      <view slot="right-icon" class='limit-num'>
+        <text>{{ currentCharNum }}/{{ maxCharNum }}</text>
+      </view>
+    </van-field>
+  </van-cell-group>
+
+  <!-- upload section -->
+  <view class='upload-area'>
+    <van-uploader 
+      file-list="{{ fileList }}" 
+      upload-text="上传图片" 
+      bind:after-read="afterRead" 
+      bind:delete="onDelete" 
+      max-count="1"
+      preview-size="200px"
+    />
+  </view>
+
+  <!-- submit section -->
+  <view class='bottom-button' bindtap="onClickSubmitFeedback" style="padding-bottom: {{paddingBottom}}">
+    <text>提交反馈</text>
+  </view>
+</view>
+

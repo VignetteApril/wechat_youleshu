@@ -1,0 +1,3 @@
+<view class='content'>
+  <image src="{{ image_url }}" mode="widthFix"></image>
+</view>

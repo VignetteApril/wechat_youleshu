@@ -1,0 +1,76 @@
+.login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.login-content .logo {
+  margin-top: 300rpx;
+  width: 333rpx;
+	height: 121rpx;
+}
+
+.login-content .login-button {
+  width: 471rpx;
+	height: 81rpx;
+	background-color: #ffffff;
+	box-shadow: 5rpx 5rpx 49rpx 0rpx 
+		rgba(0, 90, 255, 0.07);
+	border-radius: 40rpx;
+  margin-left: 10rpx; 
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-content .login-button text {
+  font-family: SourceHanSansCN-Regular;
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #4fbbeb;
+}
+
+.info {
+  font-family: SourceHanSansCN-Regular;
+	font-size: 20rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1rpx;
+  color: #ffffff;
+  
+  margin-top: 400rpx;
+}
+
+.button-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 20rpx;
+}
+
+.button-area .refuse {
+  margin-top: 40rpx;
+  font-family: SourceHanSansCN-Regular;
+	font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #ffffff;
+}
+
+
+/* background sectioon */
+.background-image {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0rpx;
+  z-index: -1;
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-search": "../../van/search/index",
+    "van-cell": "../../van/cell/index",
+    "van-cell-group": "../../van/cell-group/index"
+  },
+  "navigationBarTitleText": "课程搜索"
+}

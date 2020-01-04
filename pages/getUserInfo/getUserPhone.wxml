@@ -1,0 +1,13 @@
+<image class='background-image' mode="widthFix" src="../../assets/icons/getUserInfo/auth_back.png"></image>
+
+<view class='login-content'>
+  <image src="../../assets/icons/shared/logo.png" class='logo' mode="aspectFill"/>
+
+  <text class='info'>邮乐书将会获取您的手机号信息</text>
+  <view class='button-area'>
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class='login-button'>
+      <text>开始学习</text>
+    </button>
+    <text class='refuse' bindtap="onClickRefuse">退出</text>
+  </view>
+</view>
