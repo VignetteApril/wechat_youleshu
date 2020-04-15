@@ -10,9 +10,9 @@
     <van-tab title="{{ grade.name }}" wx:for="{{ grade_data }}"  wx:for-item="grade" wx:for-index="index" wx:key='id'>
       <view class='subjects'>
         <view class='subject' wx:if="{{ grade.subjects.length > 0 }}" wx:for="{{ grade.subjects }}" wx:for-item="subject" wx:for-index="index" wx:key="id" data-id="{{ subject.id }}" bind:tap="onClickSubject">
-          <view class="text-section">
+          <!-- <view class="text-section">
             <text class="subject-title">{{ subject.name }}</text>
-          </view>
+          </view> -->
           <image src="{{subject.img_url}}" mode="widthFix" class='subject-cover'></image>
         </view>
 

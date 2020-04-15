@@ -2,15 +2,18 @@
   <image src="../../assets/icons/my/my_back.png" class='top-background-image'></image>
   <view class='user-info-content'>
     <view class=".user-info-section">
-      <image class="user-head" src="{{ avatarUrl }}" mode="widthFix" bindtap="onClickUserHead"></image>
+      <image class="user-head" src="{{ avatarUrl }}" mode="widthFix" bindtap="onClickUsePhone"></image>
       <view class="name-phone">
-        <text class="name">{{ nickName }}</text>
-        <text class="phone" bindtap="onClickUsePhone">{{ userPhone }}</text>
+        <text class="name" bindtap="onClickUsePhone">{{ nickName }}</text>
+        <text class="phone" wx:if="{{ userPhone != '' }}">{{ userPhone }}</text>
+        <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class='login-button' wx:if="{{ showUpdateButton }}">
+          <text>更新头像昵称</text>
+        </button>
       </view>
     </view>
     <view class="menu-section">
       <view class="center-area">
-        <view class="content">
+        <view class="content" bindtap="onClickMyOrders">
           <image src="../../assets/icons/my/my_order.png" mode="widthFix" class='user-head'></image>
           <text>我的订单</text>
         </view>
@@ -20,9 +23,9 @@
           <text>我的课程</text>
         </view>
 
-        <view class="content" bindtap="onClickSetting">
-          <image src="../../assets/icons/my/my_setting.png" mode="widthFix" class="setting"></image>
-          <text>设置</text>
+        <view class="content" bindtap="onClickScanning">
+          <image src="../../assets/icons/my/scan.png" mode="widthFix" class="setting"></image>
+          <text>扫码看课</text>
         </view>
       </view>
     </view>
@@ -35,16 +38,20 @@
       <image src="../../assets/icons/shared/key.png" mode="widthFix" class="left-icon"></image>
     </view>
   </van-cell>
-  <van-cell title="收货地址" is-link >
+  <van-cell title="收货地址" is-link bindtap='onClickMyAddress'>
     <view slot="icon" class="icon-slot">
       <image src="../../assets/icons/my/my_addr.png" mode="widthFix" class="left-icon"></image>
     </view>
   </van-cell>
-  <van-cell title="反馈与帮助" is-link bindtap="goToFeedback">
+  <van-cell title="反馈与帮助" is-link bindtap="goToFeedback" >
     <view slot="icon" class="icon-slot">
       <image src="../../assets/icons/my/my_env.png" mode="widthFix" class="left-icon"></image>
     </view>
   </van-cell>
+</view>
+
+<view class='bottom-area' bindtap="onClickLogOut">
+  <text class='button-text'>退出登录</text>
 </view>
 
 <!-- 弹出层 -->
@@ -63,7 +70,8 @@
       <text class='input-label' slot='label'>请输入学习码</text>
     </van-field>
 
-    <text class='hint'>注：从《邮乐书》致家长的一封信中获取学习码</text>
+    <!-- <text class='hint'>注：从《邮乐书》致家长的一封信中获取学习码</text> -->
+    <text class='hint'>{{ hint }}</text>
 
     <view class='submit-book-code' bindtap="onClickSubmitBookCode">
       <text class='submit-text'>提交</text>

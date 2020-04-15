@@ -17,7 +17,8 @@ Page({
     showInpurBookCode: false,
     bookValue: '',
     owner: false,
-    paddingBottom: ''
+    paddingBottom: '',
+    hint: ''
   },
 
   /**
@@ -26,7 +27,25 @@ Page({
   onLoad: function (options) {
     let _that      = this;
     let token      = wx.getStorageSync('token');
-    let subject_id = options.subject_id
+    let subject_id = options.subject_id;
+    
+    fetch({
+      url: 'text_settings/book_code_comment',
+      data: {},
+      method: 'get'
+    }).then((res) => {
+      _that.setData({
+        hint: res.data
+      })
+    })
+
+    // 如果是扫描小程序进来的用户走scene这套逻辑
+    const scene = decodeURIComponent(options.scene)
+    console.log(scene)
+    let subject_id_qr = scene.split('=')[1];
+    if (typeof(subject_id_qr) != "undefined") {
+      subject_id = subject_id_qr;
+    }
 
     fetch({
       url: 'subjects/' + subject_id,
@@ -35,7 +54,6 @@ Page({
     }).then((res) => {
       _that.setData({
         subject: res.data,
-        activeNames: ['1'],
         current_play_url: res.data.sample_video_url,
         subject_id: subject_id
       })
@@ -45,6 +63,7 @@ Page({
       });
 
       let formal_video_url = res.data.courses[0].video_url;
+      let formal_video_id  = res.data.courses[0].id;
       if (util.check_login_status()) {
         fetch({
           url: 'subjects/check_subject_owner',
@@ -66,7 +85,8 @@ Page({
             })
           } else {
             _that.setData({
-              current_play_url: formal_video_url
+              current_play_url: formal_video_url,
+              is_playing: formal_video_id
             })
           };
         })
@@ -205,5 +225,14 @@ Page({
     let token = wx.getStorageSync('token');
     let book_code = _that.data.bookValue;
     util.input_book_code(book_code, token, _that.data.subject_id);
+  },
+
+  /**
+   * 图片加载监听
+   */
+  imageLoad: function () {
+    this.setData({
+      activeNames: ['1', '2']
+    })
   }
 })

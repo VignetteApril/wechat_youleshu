@@ -29,7 +29,7 @@
     </van-collapse-item>
     <van-collapse-item title="课程介绍" name="2" icon="orders-o">
       <view class='course-directions'>
-        <image mode="widthFix" class='detail-image' wx:for="{{ subject.detail_images }}" wx:for-item="detail_image" wx:index="index" wx:key="id" src="{{ detail_image.image_url }}" lazy-load="true"></image>
+        <image mode="widthFix" class='detail-image' wx:for="{{ subject.detail_images }}" wx:for-item="detail_image" wx:index="index" wx:key="id" src="{{ detail_image.image_url }}" lazy-load="true" bindload="imageLoad"></image>
       </view>
     </van-collapse-item>
   </van-collapse>
@@ -60,7 +60,8 @@
       <text class='input-label' slot='label'>请输入学习码</text>
     </van-field>
 
-    <text class='hint'>注：从《邮乐书》致家长的一封信中获取学习码</text>
+    <!-- <text class='hint'>注：从《邮乐书》致家长的一封信中获取学习码</text> -->
+    <text class='hint'>{{ hint }}</text>
 
     <view class='submit-book-code' bindtap="onClickSubmitBookCode">
       <text class='submit-text'>提交</text>

@@ -21,7 +21,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
+	"libVersion": "2.10.1",
 	"appid": "wx3b5d48894105a505",
 	"projectname": "youleshu",
 	"debugOptions": {
@@ -136,6 +136,20 @@
 					"name": "用户搜索页面",
 					"pathName": "pages/search/search",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "课程详情sence",
+					"pathName": "pages/subject/subject",
+					"query": "scene=subject_id=7",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "pages/subject/subject",
+					"pathName": "pages/subject/subject",
+					"query": "scene=subject_id:7",
 					"scene": null
 				}
 			]

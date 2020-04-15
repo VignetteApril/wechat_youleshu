@@ -5,5 +5,5 @@
     "van-popup": "../../van/popup/index",
     "van-field": "../../van/field/index"
   },
-  "navigationBarTitleText": "个人中心"
+  "navigationStyle": "custom"
 }

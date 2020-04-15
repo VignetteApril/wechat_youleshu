@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    is_checked: true
   },
 
   /**
@@ -78,8 +78,16 @@ Page({
   onShareAppMessage: function () {
 
   },
+
   bindGetUserInfo(e) {
-    console.log(e.detail.userInfo);
+    if (this.data.is_checked == false) {
+      wx.showToast({
+        title: '请勾选确认信息',
+        icon: 'none'
+      });
+
+      return;
+    }
     wx.setStorageSync('userInfo', e.detail.userInfo);
 
     wx.navigateBack({
@@ -89,5 +97,16 @@ Page({
 
   onClickRefuse: function () {
     wx.navigateBack();
+  },
+
+  /**
+   * 用户点击checkbox
+   */
+  onClickCheck: function () {
+    let _that = this;
+    
+    _that.setData({
+      is_checked: !_that.data.is_checked
+    })
   }
 })

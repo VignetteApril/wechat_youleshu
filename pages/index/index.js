@@ -7,7 +7,8 @@ Page({
   data: {
     top_video_url: '',
     base_url: app.baseUrl,
-    subjects: []
+    subjects: [],
+    banner_url: ''
   },
   onReady: function (res) {
     this.videoContext = wx.createVideoContext('myVideo');
@@ -23,7 +24,8 @@ Page({
     }).then((res) => {
       console.log(res.data);
       _that.setData({
-        top_video_url: res.data.video_url
+        top_video_url: res.data.video_url,
+        banner_url: res.data.banner
       })
     })
 

@@ -1,4 +1,6 @@
-<!--index.wxml-->
+<!-- 顶部banner -->
+<image src="{{banner_url}}" mode="widthFix" class='banner' wx:if="{{ banner_url != '' }}"></image>
+
 <!-- top video section -->
 <view class="top-video">
   <video class='my-video' id="myVideo" src="{{top_video_url}}" autoplay='{{false}}' show-center-play-btn="{{false}}" controls="true" objectFit="cover"></video>
@@ -8,7 +10,9 @@
 <view class='subject-section'>
   <view class='subjects' wx:for="{{ subjects }}" wx:for-item="subject_data" wx:for-index="index" wx:key='id'>
     <view class='title-bar'>
-      <image src="../../assets/icons/main_page/math.png" class="icon"></image>
+      <image src="../../assets/icons/main_page/math.png" class="icon" wx:if="{{ subject_data.section_title == '数学' }}"></image>
+      <image src="../../assets/icons/main_page/chinese.png" class="icon" wx:if="{{ subject_data.section_title == '语文' }}"></image>
+      <image src="../../assets/icons/main_page/english.png" class="icon" wx:if="{{ subject_data.section_title == '英语' }}"></image>
       <text>{{subject_data.section_title}}</text>
     </view>
 
@@ -17,7 +21,7 @@
         <image class='content-image' src="{{subject.img_url}}" mode="widthFix"></image>
         <view class='content-text'>
           <text class='subject-name'>{{subject.name}}</text>
-          <text class='hint'>含视频教程</text>
+          <text class='hint'>{{ subject.main_desc }}</text>
         </view>
       </view>
     </view>

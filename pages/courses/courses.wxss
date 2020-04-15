@@ -21,18 +21,20 @@
 
 .grade .subjects .subject image {
   width: 678rpx;
-	height: 200rpx;
+  height: 200rpx;
+  
+  border-radius: 15rpx;
 }
 
 .grade .subjects .subject .text-section {
   position: absolute;
   top: 30rpx;
-  right: 200rpx;
+  right: 60rpx;
 }
 
 .grade .subjects .subject .text-section .subject-title {
   font-family: SourceHanSansCN-Medium;
-	font-size: 42rpx;
+	font-size: 35rpx;
 	font-weight: normal;
 	font-stretch: normal;
 	letter-spacing: 3rpx;

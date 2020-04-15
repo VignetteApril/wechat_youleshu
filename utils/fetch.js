@@ -1,5 +1,6 @@
 // 请求的base url会和后缀的url进行拼接，组成完整的请求url
-const baseURL = 'http://127.0.0.1:3000/api/v1/'
+const App = getApp();
+const baseURL = App.globalData.baseUrl;
 
 // 返回的数据结构为
 // { data: [...], code: '', message: '' }

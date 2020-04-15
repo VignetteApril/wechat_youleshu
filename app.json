@@ -17,13 +17,14 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTi tleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "color": "#B3B3B3",
-    "selectedColor": "#CC2D76",
+    "color": "#4E4E4E",
+    "selectedColor": "#4E4E4E",
     "list": [
       {
         "pagePath": "pages/index/index",

@@ -2,7 +2,7 @@
 
 /* top video section */
 .top-video .my-video{
-  height: 366rpx;
+  height: 400rpx;
   width: 750rpx;
 }
 
@@ -53,11 +53,11 @@
 
 /* subject directions section */
 .subject-detail {
-  margin-bottom: 96rpx;
+  padding-bottom: 96rpx;
 }
 
 .detail-image {
-  width: 750rpx;
+  width: 690rpx;
   height: auto;
 }
 

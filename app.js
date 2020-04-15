@@ -60,7 +60,7 @@ App({
     if (version == 'develop') {
       _that.globalData.baseUrl = 'http://127.0.0.1:3000/api/v1/';
     } else {
-      _that.globalData.baseUrl = 'https://www.youleshu.vip/api/v1'
+      _that.globalData.baseUrl = 'https://www.youleshu.vip/api/v1/'
     }
   },
   globalData: {

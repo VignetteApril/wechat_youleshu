@@ -12,18 +12,31 @@ Page({
     userInfo: '',
     avatarUrl: '../../assets/icons/my/my_head.png',
     mixed_phone_number: '',
-    userPhone: '点击授权手机号',
-    nickName: '小朋友',
+    userPhone: '',
+    nickName: '点击授权登录',
     showInpurBookCode: false,
     bookValue: '',
-    token: ''
+    token: '',
+    hint: '',
+    showUpdateButton: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let _that = this;
 
+    fetch({
+      url: 'text_settings/book_code_comment',
+      data: {},
+      method: 'get'
+    }).then((res) => {
+      console.log(res.data);
+      _that.setData({
+        hint: res.data
+      })
+    })
   },
 
   /**
@@ -42,17 +55,22 @@ Page({
     let userPhone = wx.getStorageSync('mixed_phone_number');
     let token     = wx.getStorageSync('token');
 
-    if (userInfo != '') {
+    if (userInfo != '' && userPhone != '') {
       _that.setData({
         userInfo: userInfo,
         avatarUrl: userInfo.avatarUrl,
         nickName: userInfo.nickName,
-      });
-    };
-
-    if (userPhone != '') {
-      _that.setData({
         userPhone: userPhone
+      });
+    } else if (userInfo != '' && userPhone == '') {
+      _that.setData({
+        nickName: '点击授权登录',
+      });
+    } else if (userInfo == '' && userPhone != '') {
+      _that.setData({
+        nickName: userPhone,
+        userPhone: '',
+        showUpdateButton: true
       });
     };
 
@@ -160,9 +178,15 @@ Page({
    * 用户点击未登录的手机号
    */
   onClickUsePhone:function() {
-    if (this.data.mixed_phone_number == '') {
+    let userPhone = wx.getStorageSync('mixed_phone_number');
+    if (userPhone == '') {
       wx.navigateTo({
         url: '/pages/getUserInfo/getUserPhone',
+      })
+    } else {
+      wx.showToast({
+        title: '已经登录',
+        icon: 'none'
       })
     }
   },
@@ -177,11 +201,58 @@ Page({
   },
 
   /**
-   * 用户点击设置
+   * 用户点击扫码看课
    */
-  onClickSetting: function () {
-    wx.navigateTo({
-      url: '/pages/setting/setting',
+  onClickScanning: function () {
+    wx.scanCode({
+      success (res) {
+        const path = res["path"]
+        console.log(path)   
+        wx.navigateTo({
+          url: "/" + path
+        })
+      }
+    })
+  },
+
+  /**
+   * 用户点击我的订单
+   */
+  onClickMyOrders: function () {
+    util.feature_not_open();
+  },
+
+  /**
+   * 用户点击收货地址
+   */
+  onClickMyAddress: function () {
+    util.feature_not_open();
+  },
+
+   /**
+   * 用户点击底部退出登录
+   */
+  onClickLogOut: function () {
+    // 清除登录状态
+    wx.clearStorageSync();
+
+    wx.showToast({
+      title: '退出登录成功',
+      icon: 'none',
+      duration: 3000,
+      success () {
+        wx.reLaunch({
+          url: '/pages/my/my',
+        })
+      }
+    })
+  },
+
+  bindGetUserInfo(e) {
+    wx.setStorageSync('userInfo', e.detail.userInfo);
+
+    wx.reLaunch({
+      url: '/pages/my/my',
     })
   }
 })

@@ -15,7 +15,7 @@ page {
 
 .user-info-content {
   position: absolute;
-  top: 140rpx;
+  top: 120rpx;
   left: 35rpx;
 
   display: flex;
@@ -55,8 +55,6 @@ page {
 	font-stretch: normal;
 	letter-spacing: 0px;
 	color: #ffffff;
-
-  margin-top: 10rpx;
 }
 
 .user-info-content .menu-section {
@@ -123,7 +121,7 @@ page {
 /* 下面部分 */
 
 .bottom-section {
-  margin-top: 120rpx;
+  margin-top: 100rpx;
 }
 
 .bottom-section .icon-slot {
@@ -142,7 +140,7 @@ page {
 /* 弹出层 */
 .popup {
   background-color: transparent !important;
-  top: 500rpx !important;
+  top: 650rpx !important;
 
   display: flex;
   flex-direction: column;
@@ -221,4 +219,49 @@ page {
 	font-stretch: normal;
 	letter-spacing: 3rpx;
 	color: #feffff;
+}
+
+.bottom-area {
+  background-color: white;
+  position: fixed;
+  bottom: 0rpx;
+  width: 100vw;
+  height: 100rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-area text {
+  font-family: SourceHanSansCN-Regular;
+	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2rpx;
+	color: #0db5ff;
+}
+
+.login-button {
+  width: 210rpx !important;
+	height: 23rpx;
+	border-radius: 20rpx;
+  border: solid 1rpx #ffffff;
+  background: transparent;
+  margin-top: 10rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-button text {
+  font-family: SourceHanSansCN-Regular;
+	font-size: 18rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #ffffff;
 }

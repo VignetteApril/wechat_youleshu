@@ -83,8 +83,19 @@ function input_book_code (code, token, subject_id = '') {
   }
 }
 
+/**
+ * 功能暂未开始的提醒方法
+ */
+function feature_not_open () {
+  wx.showToast({
+    title: '功能尚未开放，敬请期待...',
+    icon: 'none'
+  })
+}
+
 module.exports = {
   formatTime: formatTime,
   check_login_status: check_login_status,
-  input_book_code: input_book_code
+  input_book_code: input_book_code,
+  feature_not_open: feature_not_open
 }

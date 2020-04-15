@@ -37,14 +37,20 @@
 }
 
 .info {
+  margin-top: 400rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.info text {
+  margin-left: 10rpx;
   font-family: SourceHanSansCN-Regular;
 	font-size: 20rpx;
 	font-weight: normal;
 	font-stretch: normal;
 	letter-spacing: 1rpx;
   color: #ffffff;
-  
-  margin-top: 400rpx;
 }
 
 .button-area {
@@ -69,8 +75,13 @@
 /* background sectioon */
 .background-image {
   width: 100vw;
-  height: 100vh;
+  height: 100% !important;  
   position: fixed;
   top: 0rpx;
   z-index: -1;
+}
+
+.check {
+  height: 30rpx;
+  width: 30rpx; 
 }

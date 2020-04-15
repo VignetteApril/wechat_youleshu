@@ -1,14 +1,19 @@
 /**index.wxss**/
+.banner {
+  height: 283rpx;
+  width: 750rpx;
+}
+
 /* top video section */
 .top-video .my-video{
-  height: 366rpx;
+  height: 400rpx;
   width: 750rpx;
 }
 
 /* subjects section */
 
 .subject-section {
-  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
 }
 
 .subjects .title-bar {
@@ -69,7 +74,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 106rpx;
-  padding: 10rpx;
+  padding: 25rpx;
   border-radius: 0 0 12rpx 12rpx;
 }
 

@@ -2,8 +2,11 @@
 
 <view class='login-content'>
   <image src="../../assets/icons/shared/logo.png" class='logo' mode="aspectFill"/>
-
-  <text class='info'>邮乐书将会使用您的头像和昵称等信息</text>
+  <view class='info'>
+    <image src="../../assets/icons/getUserInfo/check.png" class='check' mode="aspectFill" bindtap="onClickCheck" wx:if="{{ is_checked == false }}"/>
+    <image src="../../assets/icons/getUserInfo/check_selected.png" class='check' mode="aspectFill" bindtap="onClickCheck" wx:if="{{ is_checked == true }}"/>
+    <text>邮乐书将会使用您的头像和昵称等信息</text>
+  </view>
   <view class='button-area'>
     <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class='login-button'> 
       <text>开始学习</text>
