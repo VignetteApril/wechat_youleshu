@@ -137,7 +137,7 @@ Page({
       // 发送创建反馈的请求
       if (_that.data.fileList.length > 0) {
         wx.uploadFile({
-          url: 'http://127.0.0.1:3000/api/v1/feedbacks',
+          url: 'feedbacks',
           filePath: _that.data.fileList[0].url,
           name: 'image',
           formData: { message: _that.data.message, token: _that.data.token },
