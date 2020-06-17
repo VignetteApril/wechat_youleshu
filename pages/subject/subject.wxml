@@ -1,6 +1,6 @@
 <!-- top video section -->
 <view class="top-video">
-  <video class='my-video' id="courseVideo" src="{{current_play_url}}" autoplay='{{false}}' show-center-play-btn="{{false}}" controls="true" objectFit="cover" custom-cache="{{false}}"></video>
+  <video class='my-video' id="courseVideo" src="{{current_play_url}}" autoplay='{{false}}' show-center-play-btn="{{false}}" controls="true" objectFit="" custom-cache="{{false}}"></video>
 </view>
 
 <!-- middle subject detail section -->

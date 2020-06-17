@@ -6,7 +6,7 @@
 
 /* top video section */
 .top-video .my-video{
-  height: 400rpx;
+  height: 423rpx;
   width: 750rpx;
 }
 

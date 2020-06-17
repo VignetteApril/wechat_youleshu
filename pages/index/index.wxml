@@ -3,7 +3,15 @@
 
 <!-- top video section -->
 <view class="top-video">
-  <video class='my-video' id="myVideo" src="{{top_video_url}}" autoplay='{{false}}' show-center-play-btn="{{false}}" controls="true" objectFit="cover"></video>
+  <video 
+    class='my-video' 
+    id="myVideo" 
+    style="height:{{height}}px; width:{{width}}px;" 
+    src="{{top_video_url}}" 
+    autoplay='{{false}}' 
+    show-center-play-btn="{{false}}" 
+    controls="true" 
+    objectFit=""></video>
 </view>
 
 <!-- subjects section -->
