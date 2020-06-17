@@ -22,7 +22,7 @@
 		"useCompilerModule": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.10.1",
+	"libVersion": "2.0.4",
 	"appid": "wx3b5d48894105a505",
 	"projectname": "youleshu",
 	"debugOptions": {
